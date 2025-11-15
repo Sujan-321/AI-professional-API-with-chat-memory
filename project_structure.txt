@@ -1,0 +1,45 @@
+Folder PATH listing for volume Drive
+Volume serial number is C643-AC58
+E:.
+�   .env
+�   .gitignore
+�   app_data.db
+�   project_structure.txt
+�   requirements.txt
+�   
+����app
+�   �   main.py
+�   �   __init__.py
+�   �   
+�   ����api
+�   �   �   conversate.py
+�   �   �   document_ingestion.py
+�   �   �   test_qdrant.py
+�   �   �   test_redis.py
+�   �   �   __init__.py
+�   �           
+�   ����db
+�   �   �   database.py
+�   �   �   
+�   �   ����__pycache__
+�   �           database.cpython-312.pyc
+�   �           
+�   ����services
+�   �   �   chat_memory.py
+�   �   �   chunking.py
+�   �   �   conversate_service.py
+�   �   �   embedding.py
+�   �   �   intent_service.py
+�   �   �   llm_service.py
+�   �   �   memory_service.py
+�   �   �   rag_service.py
+�   �   �   text_extraction.py
+�   �   �   vector_db.py
+�   �   �   __init__.py
+�   �           
+�   ����utils
+�   �   �   config.py
+�   �   �   redis_client.py
+����uploaded_docs
+        blackhole.pdf
+        
