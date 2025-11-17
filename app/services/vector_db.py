@@ -1,9 +1,17 @@
+# app/services/vector_db.py
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
 from app.utils.config import QDRANT_URL
 
-# Initialize Qdrant connection
+# Initialize Qdrant client
 client = QdrantClient(url=QDRANT_URL)
+
+def upsert_vectors(collection_name: str, points: list[models.PointStruct]):
+    """
+    Insert embeddings and metadata into Qdrant collection.
+    """
+    client.upsert(collection_name=collection_name, points=points)
+
 
 # Create a collection (like a table for vectors)
 def create_collection():

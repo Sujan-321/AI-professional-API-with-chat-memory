@@ -9,19 +9,60 @@ class RAGService:
         self.encoder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
         self.collection = "documents"
 
-    def search(self, query: str, limit=5):
+    def search(self, query: str, limit: int = 5):
         vector = self.encoder.encode(query).tolist()
 
-        search_result = self.client.search(
-            collection_name=self.collection,
-            query_vector=vector,
-            limit=limit
-        )
+        try:
+            # Newer versions of Qdrant client (limit as keyword)
+            results = self.client.search(
+                collection_name=self.collection,
+                query_vector=vector,
+                limit=limit
+            )
+        except TypeError:
+            # Older versions (limit as positional argument)
+            results = self.client.search(
+                collection_name=self.collection,
+                query_vector=vector
+            )[:limit]
 
-        # ensure all payload text is string
-        contexts = [str(hit.payload.get("text", "")) for hit in search_result]
+        hits = []
+        for hit in results:
+            payload = hit.payload or {}
+            hits.append({
+                "chunk": payload.get("chunk") or payload.get("text") or "",
+                "filename": payload.get("filename"),
+                "chunk_id": payload.get("chunk_id"),
+                "score": hit.score
+            })
 
-        return "\n".join(contexts)
+        return hits
+
+
+
+    # def search(self, query: str, limit: int = 5):
+    #     vector = self.encoder.encode(query).tolist()
+
+    #     results = self.client.search(
+    #         collection_name=self.collection,
+    #         query_vector=vector,
+    #         limit=limit
+    #     )
+
+    #     hits = []
+    #     for hit in results:
+    #         payload = hit.payload or {}
+    #         hits.append({
+    #             "chunk": payload.get("chunk") or payload.get("text") or "",
+    #             "filename": payload.get("filename"),
+    #             "chunk_id": payload.get("chunk_id"),
+    #             "score": hit.score
+    #         })
+
+    #     return hits
+
+
+
 
 
 
