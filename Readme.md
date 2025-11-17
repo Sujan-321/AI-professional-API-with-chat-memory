@@ -234,8 +234,8 @@ cd project-folder
 python -m venv venv
 source venv/bin/activate     # Linux/macOS
 venv\Scripts\activate       # Windows
-![](images/activate environment.jpg)
 ```
+![Activation Screenshot](images/activateEnvironment.jpg)
 
 ### 3️⃣ Install dependencies
 
