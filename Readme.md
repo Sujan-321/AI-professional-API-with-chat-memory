@@ -247,19 +247,18 @@ pip install -r requirements.txt
 
 ```
 docker run -d --name qdrant -p 6333:6333 qdrant/qdrant
-```
-
-### 5️⃣ Start Redis
-
-```
 docker run -d -p 6379:6379 redis
 ```
+![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/4d3fe717201a909f75ef9919011163ad0652f393/images/redis%20and%20qdrant.JPG)
+
 
 ### 6️⃣ Run FastAPI
 
 ```
 uvicorn main:app --reload
 ```
+![Image Alt]()
+![Image Alt]()
 ### 6️⃣ Create .env file in root directory with following
 
 ```
