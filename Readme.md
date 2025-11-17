@@ -221,14 +221,14 @@ Used for multi-turn chat.
 
 # 🛠 Installation
 
-### 1️⃣ Clone repo
+### 1 Clone repo
 
 ```
 git clone <repo-url>
 cd project-folder
 ```
 
-### 2️⃣ Create virtual environment
+### 2 Create virtual environment
 
 ```
 python -m venv venv
@@ -237,29 +237,29 @@ venv\Scripts\activate       # Windows
 ```
 ![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e6762b1c3dd37dcdc375de7bf9118148aef4759e/images/activateEnvironment.JPG)
 
-### 3️⃣ Install dependencies
+### 3 Install dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Start Qdrant
+### 4 Start Qdrant
 
 ```
 docker run -d --name qdrant -p 6333:6333 qdrant/qdrant
 docker run -d -p 6379:6379 redis
 ```
-![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/4d3fe717201a909f75ef9919011163ad0652f393/images/redis%20and%20qdrant.JPG)
+![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/RedisAndQdrant.JPG)
 
 
-### 6️⃣ Run FastAPI
+### 5 Run FastAPI
 
 ```
 uvicorn main:app --reload
 ```
-![Image Alt]()
-![Image Alt]()
-### 6️⃣ Create .env file in root directory with following
+![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/RunApp.JPG)
+
+### 6 Create .env file in root directory with following
 
 ```
 GROQ_API_KEY=Your-api-key-here
@@ -271,7 +271,55 @@ REDIS_HOST=localhost
 REDIS_PORT=6379
 ```
 
----
+### 7 Run backend
+
+```
+open browser and run : 127.0.0.1:8000
+```
+![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/step%204%20check%20localhost%20for%20backend%20running.JPG)
+
+
+### 7 Upload the document
+
+```
+open browser and run : 127.0.0.1:8000/api/doc/upload
+```
+![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/step%205%20upload%20document%20in%20postman.JPG)
+
+
+
+### 8 Upload file with chunkstrategy:paragraph
+
+```
+open browser and run : 127.0.0.1:8000/api/doc/upload
+```
+![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/step%205a%20upload%20file%20with%20chunkstrategy%20paragraph.JPG)
+
+
+### 9 Upload file with chunkstrategy:fixed
+
+```
+open browser and run : 127.0.0.1:8000/api/doc/upload
+```
+![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/step%205b%20upload%20file%20with%20chunk%20strategy.JPG)
+
+
+### 7 Chat with bot
+
+```
+open browser and run : 127.0.0.1:8000/api/conversate
+```
+![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/step%205c%20conversationwith%20bot.JPG)
+
+
+### 7 Bot can book inerview 
+
+```
+open browser and run : 127.0.0.1:8000/api/conversate
+```
+![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/step%206%20booking%20confirmed.JPG)
+
+
 
 # 🧪 Testing
 
@@ -283,7 +331,7 @@ http://localhost:8000/docs
 
 Try:
 
-* `/api/upload`
+* `/api/doc/upload`
 * `/api/conversate`
 
 ---
