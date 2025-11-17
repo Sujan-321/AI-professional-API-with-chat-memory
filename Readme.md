@@ -234,6 +234,7 @@ cd project-folder
 python -m venv venv
 source venv/bin/activate     # Linux/macOS
 venv\Scripts\activate       # Windows
+![](images/activate environment.jpg)
 ```
 
 ### 3️⃣ Install dependencies
@@ -258,6 +259,17 @@ docker run -d -p 6379:6379 redis
 
 ```
 uvicorn main:app --reload
+```
+### 6️⃣ Create .env file in root directory with following
+
+```
+GROQ_API_KEY=Your-api-key-here
+OPENAI_CHAT_MODEL=gpt-4o-mini   
+OPENAI_EMBED_MODEL=text-embedding-3-small
+QDRANT_URL=http://localhost:6333
+QDRANT_COLLECTION=documents
+REDIS_HOST=localhost
+REDIS_PORT=6379
 ```
 
 ---
