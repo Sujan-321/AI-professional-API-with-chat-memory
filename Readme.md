@@ -235,7 +235,7 @@ python -m venv venv
 source venv/bin/activate     # Linux/macOS
 venv\Scripts\activate       # Windows
 ```
-![Activation Screenshot](images/activateEnvironment.jpg)
+![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e6762b1c3dd37dcdc375de7bf9118148aef4759e/images/activateEnvironment.JPG)
 
 ### 3️⃣ Install dependencies
 
