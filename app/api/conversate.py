@@ -110,7 +110,7 @@ def conversate_endpoint(payload: ConversateRequest, db: Session = Depends(get_db
             db.refresh(booking)
 
             return ConversateResponse(
-                answer=f"Booking confirmed for {booking.name} on {booking.date} at {booking.time} ✅",
+                answer=f"Booking confirmed for {booking.name} on {booking.date} at {booking.time}",
                 round_trip_id=None,
                 sources=[]
             )

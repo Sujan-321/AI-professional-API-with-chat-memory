@@ -279,43 +279,43 @@ open browser and run : 127.0.0.1:8000
 ![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/step%204%20check%20localhost%20for%20backend%20running.JPG)
 
 
-### 7 Upload the document
+### 8 Upload the document
 
 ```
-open browser and run : 127.0.0.1:8000/api/doc/upload
+open postman and run : 127.0.0.1:8000/api/doc/upload
 ```
 ![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/step%205%20upload%20document%20in%20postman.JPG)
 
 
 
-### 8 Upload file with chunkstrategy:paragraph
+### 9 Upload file with chunkstrategy:paragraph
 
 ```
-open browser and run : 127.0.0.1:8000/api/doc/upload
+open postman and run : 127.0.0.1:8000/api/doc/upload
 ```
 ![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/step%205a%20upload%20file%20with%20chunkstrategy%20paragraph.JPG)
 
 
-### 9 Upload file with chunkstrategy:fixed
+### 10 Upload file with chunkstrategy:fixed
 
 ```
-open browser and run : 127.0.0.1:8000/api/doc/upload
+open postman and run : 127.0.0.1:8000/api/doc/upload
 ```
 ![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/step%205b%20upload%20file%20with%20chunk%20strategy.JPG)
 
 
-### 7 Chat with bot
+### 11 Chat with bot
 
 ```
-open browser and run : 127.0.0.1:8000/api/conversate
+open postman and run : 127.0.0.1:8000/api/conversate
 ```
 ![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/step%205c%20conversationwith%20bot.JPG)
 
 
-### 7 Bot can book inerview 
+### 12 Bot can book inerview 
 
 ```
-open browser and run : 127.0.0.1:8000/api/conversate
+open postman and run : 127.0.0.1:8000/api/conversate
 ```
 ![Image Alt](https://github.com/Sujan-321/AI-professional-API-with-chat-memory/blob/e5445c795fcb1388fe575f31ba4ac682a31ce56a/images/step%206%20booking%20confirmed.JPG)
 
