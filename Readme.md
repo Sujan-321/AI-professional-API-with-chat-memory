@@ -76,7 +76,7 @@ requirements.txt
 
 # 📥 **Document Ingestion API**
 
-`POST /api/upload`
+`POST /api/doc/upload`
 
 ### **Form‑data fields:**
 
